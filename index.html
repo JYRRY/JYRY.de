@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JYRY.de</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato|Roboto:400,900' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <script>// All animations will take twice the time to accomplish
+        document.documentElement.style.setProperty('--animate-duration', '2s');
+        
+        // All animations will take half the time to accomplish
+        document.documentElement.style.setProperty('--animate-duration', '.5s');</script>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#" id="logo"><span class="none">JYRY</span><span class="black">.</span><span class="red">d</span><span class="gold">e</span></a></div>
+            <ul class="links">
+                <li><a href="hero" class="aa">Home</a></li>
+                <li><a href="about" class="aa">Sections</a></li>
+                <li><a href="services" class="aa">Eduction</a></li>
+                <li><a href="contact" class="aa">Contact</a></li>
+            </ul>
+            <div class="container"><a href="#" class="action_btn" id="action_btn2">Get Started</a></div>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="dropdown_menu">
+            <li><a href="hero" class="aa">Home</a></li>
+            <li><a href="about" class="aa">Sections</a></li>
+            <li><a href="services" class="aa">Eduction</a></li>
+            <li><a href="contact" class="aa">Contact</a></li>
+            <li> <a href="#" class="action_btn" id="action_btn1">Get Started</a></li>
+        </div>
+    </header>
+    
+    <main>
+        <section id="hero">
+            <h1>Willkommen</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, voluptate expedita corrupti quas incidunt hic dolor culpa?<br /> Officiis harum excepturi eum nesciunt, laudantium voluptas eos maiores explicabo? Fuga, quam libero.</p>
+        </section>
+    </main>
+
+<script>
+    const toggleBtn = document.querySelector('.toggle_btn')
+    const toggleBtnIcon = document.querySelector('.toggle_btn i')
+    const dropDownMenu = document.querySelector('.dropdown_menu')
+
+    toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle('open')
+        const isOpen = dropDownMenu.classList.contains('open')
+        toggleBtnIcon.classList = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'
+    }
+</script>
+</body>
+</html>
