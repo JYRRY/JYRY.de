@@ -80,38 +80,43 @@ header {
 }
 
 .action_btn {
-    background-color: #000;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    margin-top: -10px;
-    border: none;
-    outline: none;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: scale .2 ease;
+  font-size: 0.8rem;
+  color: #e1e1e1;
+  font-family: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
 }
 
+.action_btn:focus,
 .action_btn:hover {
-    scale: 1.05;
-    color: #fff;
-    background: transparent;
-    border: 2px solid #fff;
+  color: #fff;
 }
 
-.action_btn:active {
-    scale: 0.95;
+.action_btn:focus:after,
+.action_btn:hover:after {
+  width: 100%;
+  left: 0%;
 }
 
-#action_btn1 {
-    position: none;
-    transition: .3s ease;
-}
-
-#action_btn2 {
-    position: fixed;
-    transition: .3s ease;
+.action_btn:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
 }
 
 /* DROPDOWN MENU */
@@ -228,5 +233,5 @@ section#hero {
 }
 
 .none {
-    color: none;
+    color: #fff;
 }
