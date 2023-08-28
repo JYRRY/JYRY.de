@@ -10,11 +10,6 @@
     <link href='https://fonts.googleapis.com/css?family=Lato|Roboto:400,900' rel='stylesheet' type='text/css'>
 </head>
 <body>
-    <script>// All animations will take twice the time to accomplish
-        document.documentElement.style.setProperty('--animate-duration', '2s');
-        
-        // All animations will take half the time to accomplish
-        document.documentElement.style.setProperty('--animate-duration', '.5s');</script>
     <header>
         <div class="navbar">
             <div class="logo"><a href="#" id="logo"><span class="none">JYRY</span><span class="black">.</span><span class="red">d</span><span class="gold">e</span></a></div>
@@ -57,6 +52,9 @@
         toggleBtnIcon.classList = isOpen
         ? 'fa-solid fa-xmark'
         : 'fa-solid fa-bars'
+        
+        document.documentElement.style.setProperty('--animate-duration', '2s');
+        document.documentElement.style.setProperty('--animate-duration', '.5s');
     }
 </script>
 </body>
