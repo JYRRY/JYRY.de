@@ -81,7 +81,7 @@ header {
 
 .action_btn {
   font-size: 0.8rem;
-  color: #e1e1e1;
+  color: gold;
   font-family: inherit;
   font-weight: 800;
   cursor: pointer;
@@ -112,16 +112,18 @@ header {
   left: 50%;
   position: absolute;
   width: 0%;
-  height: 2px;
-  background-color: #fff;
+  height: 3px;
+  border-radius: 20px;
+  background-color: gold;
   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
   transition-duration: 400ms;
   transition-property: width, left;
+  transition: all 0.5s;
 }
 
 /* DROPDOWN MENU */
 .dropdown_menu {
-    display: none;
+    display: block;
     position: absolute;
     right: 2rem;
     top: 60px;
@@ -131,7 +133,7 @@ header {
     backdrop-filter: blur(15px);
     border-radius: 10px;
     overflow: hidden;
-    transition: height 0.2s cubic-bezier(0.47, 0, 0.745, 0.715);
+    transition: height 0.5s cubic-bezier(0.47, 0, 0.745, 0.715);
 }
 
 .dropdown_menu.open {
@@ -146,7 +148,7 @@ header {
 }
 
 .dropdown_menu .action_btn {
-    width: 100%;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -167,6 +169,11 @@ header {
     #action_btn2 {
         display: none;
     }
+
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
 }
 
 @media(max-width: 576px) {
@@ -174,10 +181,6 @@ header {
         left: 2rem;
         width: unset;
     }
-}
-
-.dropdown_menu {
-    display: block;
 }
 
 /* HERO */
@@ -207,12 +210,12 @@ section#hero {
     height: 3px;
     margin-bottom: -5px;
     border-radius: 4px;
-    background-color: #fff;
+    background-color: gold;
     bottom: 0;
     left: 0;
     transform-origin: right;
     transform: scaleX(0);
-    transition: transform .3s ease-in-out;
+    transition: transform .5s ease-in-out;
 }
 
 .aa:hover::before {
